@@ -39,3 +39,4 @@
 *Microsoft.XboxApp*
 *Microsoft.SkypeApp*
 *Microsoft.Copilot*
+*LinkedInforWindows*
