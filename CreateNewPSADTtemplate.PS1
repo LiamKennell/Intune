@@ -1,7 +1,5 @@
 #########  Fill in these variables before running   ################
 
-$TemplateName = Read-Host "Enter a name for the template"
-
 # enter file location where you want PSADT templates to be saved in "quotation marks"
 $PSADTroot = " "
 
@@ -9,6 +7,8 @@ $PSADTroot = " "
 $ServiceUIlocation = " "
 
 #####################################################################
+
+$TemplateName = Read-Host "Enter a name for the template"
 
 #adds a \ to the end of the ServiceUILocation variable if it's not been entered above
 if ($ServiceUIlocation -notmatch '\\$')
