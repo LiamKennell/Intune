@@ -2,7 +2,7 @@
 
 $TemplateName = Read-Host "Enter a name for the template"
 
-# enter file location where you wants PSADT scripts to be saved in "quotation marks"
+# enter file location where you wants PSADT templates to be saved in "quotation marks"
 $PSADTroot = " "
 
 #enter file location where ServiceUI_x64 / ServiceUI_x86 / InvokeServiceUI.ps1 sits in "quotation marks"
