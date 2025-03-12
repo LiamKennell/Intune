@@ -1,5 +1,15 @@
+#########  Fill in these variables before running   ################
+
 $TemplateName = Read-Host "Enter a name for the template"
 
-New-ADTTemplate -Destination "C:\LK\PS ADT" -Name $TemplateName
+# enter file location where you wants PSADT scripts to be saved in "quotation marks"
+$PSADTroot = " "
 
-Copy-Item "C:\LK\ServiceUI\*" -Destination "C:\LK\PS ADT\$TemplateName" -Recurse
+#enter file location where ServiceUI_x64 / ServiceUI_x86 / InvokeServiceUI.ps1 sits in "quotation marks"
+$ServiceUIlocation = " "
+
+#####################################################################
+
+New-ADTTemplate -Destination "$PSADTroot" -Name $TemplateName
+
+Copy-Item "$ServiceUIlocation*" -Destination "$PSADTroot\$TemplateName" -Recurse
