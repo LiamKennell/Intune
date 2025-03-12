@@ -10,6 +10,17 @@ $ServiceUIlocation = " "
 
 #####################################################################
 
+#adds a \ to the end of the ServiceUILocation variable if it's not been entered above
+if ($ServiceUIlocation -notmatch '\\$')
+{
+        $ServiceUIlocation += "\"
+}
+#adds a \ to the end of the PSATDTroot variable if it's not been entered above
+if ($PSADTroot -notmatch '\\$')
+{
+        $PSADTroot += "\"
+}
+
 New-ADTTemplate -Destination "$PSADTroot" -Name $TemplateName
 
 Copy-Item "$ServiceUIlocation*" -Destination "$PSADTroot\$TemplateName" -Recurse
