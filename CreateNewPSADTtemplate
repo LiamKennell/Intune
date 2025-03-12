@@ -1,0 +1,5 @@
+$TemplateName = Read-Host "Enter a name for the template"
+
+New-ADTTemplate -Destination "C:\LK\PS ADT" -Name $TemplateName
+
+Copy-Item "C:\LK\ServiceUI\*" -Destination "C:\LK\PS ADT\$TemplateName" -Recurse
