@@ -23,4 +23,4 @@ if ($PSADTroot -notmatch '\\$')
 
 New-ADTTemplate -Destination "$PSADTroot" -Name $TemplateName
 
-Copy-Item "$ServiceUIlocation*" -Destination "$PSADTroot\$TemplateName" -Recurse
+Copy-Item "$ServiceUIlocation*" -Destination "$PSADTroot$TemplateName" -Recurse
